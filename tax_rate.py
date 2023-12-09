@@ -1,5 +1,5 @@
 INVALID_CHARGEABLE_INCOME = 'Invalid Chargeable Income. Value should not be less than 0'
-INVALID_CUMULATIVE_INCOME = 'Invalid Chargeable Income. Value should not be less than 0'
+INVALID_CUMULATIVE_INCOME = 'Invalid Cumulative Income. Value should not be less than 0'
 INVALID_TAX_RATE = 'Invalid value provided. Rate should be between 0 and 100'
 
 
@@ -33,7 +33,7 @@ class TaxRate:
             raise TaxRateException(INVALID_CHARGEABLE_INCOME)
 
         if cumulative_income < 0:
-            raise TaxRateException(INVALID_CHARGEABLE_INCOME)
+            raise TaxRateException(INVALID_CUMULATIVE_INCOME)
 
         self._rate_in_percentage = rate_in_percentage
         self._chargeable_income = chargeable_income
